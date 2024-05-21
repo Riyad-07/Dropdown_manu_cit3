@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+
+
+
+
+
+/* ............................................................................................. */
+nav{
+    background-color: rgb(93, 255, 228);
+}
+nav .container{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .menu ul{
+    display: flex;
+    column-gap: 60px;
+}
+
+
+nav .container .menu ul li a{
+    color: white;
+    padding: 0 10px;
+    background-color: black;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .4s;
+}
+nav .container .menu ul li:hover > a{
+    background: rgb(238, 10, 200);
+    color: black;
+}
+
+
+nav .container .menu ul  li{
+    position: relative;
+}
+
+nav .container .menu ul  li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+}
+nav .container .menu ul  li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .container .menu ul  li ul li a{
+    width: 100%;
+}
+
+nav .container .menu ul  li ul li ul{
+    left: 100%;
+    top: 0;
+}
